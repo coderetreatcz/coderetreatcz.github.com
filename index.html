@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
     <meta charset="utf-8">
     <title>Code Retreat Praha 3. prosince 2011</title>
+    <meta property="og:title" content="Code Retreat" />
+    <meta property="og:type" content="activity" />
+    <meta property="og:url" content="http://coderetreat.cz/" />
+    <meta property="og:image" content="http://coderetreat.cz/coderetreat_big.png" />
+    <meta property="og:site_name" content="Code Retreat CZ" />
+    <meta property="fb:admins" content="1814692762" />
     <style>
         body {
             background-color: #333;
             color: #fff;
             font: 75%/1.5 'Myriad Pro', Candara, sans-serif;
             margin: 0;
-            padding: 0 20px;
+            padding: 0 20px 54px;
         }
 
-        a:link {
+        a:link, a:visited {
             color: #0ff;
         }
 
@@ -95,20 +101,32 @@
             </ol>
             <p><a href="http://en.wikipedia.org/wiki/Conway%27s_game_of_life">Detailní popis</a> můžete nalézt na Wikipedii.</p>
         </section>
+        <footer>
+            <div><div class="g-plusone" data-annotation="inline" data-href="http://coderetreat.cz/"></div></div>
+            <div class="fb-like" data-href="http://coderetreat.cz/" data-send="false" data-width="518" data-show-faces="true" data-colorscheme="dark" data-font="lucida grande"></div>
+        </footer>
     </div>
 </div>
-<script>
 
+<div id="fb-root"></div>
+<script>
+  var ___gcfg = {lang: 'cs'};
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-26103556-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      function loadScriptAsync(src) {
+          var as = document.createElement('script');
+          as.async = true;
+          as.src = src;
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(as, s);
+      }
+      loadScriptAsync('http://www.google-analytics.com/ga.js');
+      loadScriptAsync('https://apis.google.com/js/plusone.js');
+      loadScriptAsync('http://connect.facebook.net/en_US/all.js#xfbml=1');
   })();
-
 </script>
 </body>
 </html>
