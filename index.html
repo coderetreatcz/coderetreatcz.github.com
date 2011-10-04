@@ -49,7 +49,7 @@
 
         .popup ul {
             list-style: none;
-            padding: 12px;
+            padding: 0 12px;
         }
 
         .popup a {
@@ -98,6 +98,21 @@
 
         #toc-game-of-life h1 {
             color: #f0f;
+        }
+
+        #calendar {
+            position: absolute;
+            top: 18px;
+            left: 528px;
+            background: url('cal.png');
+            width: 20px;
+            height: 19px;
+            cursor: pointer;
+        }
+        .calendar {
+            position: absolute;
+            top: 54px;
+            left: 528px;
         }
     </style>
 </head>
@@ -168,19 +183,20 @@
              data-show-faces="true" data-colorscheme="dark" data-font="arial"></div>
     </footer>
 
+    <div id="calendar" title="Přidat do kalendáře"></div>
+
     <div class="popup calendar">
         <ul>
-            <li>
-                <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=Code%20Retreat&dates=20111203T070000Z/20111203T170000Z&details=&location=Praha&trp=true&sprop=http%3A%2F%2Fcoderetreat.cz%2F&sprop=name:"
-                   target="_blank">Add to Google Calendar</a></li>
-            <li>Download iCal</li>
+            <li><a href="http://www.google.com/calendar/event?action=TEMPLATE&text=Code%20Retreat&dates=20111203T070000Z/20111203T170000Z&details=&location=Praha&trp=true&sprop=http%3A%2F%2Fcoderetreat.cz%2F&sprop=name:"
+                   target="_blank">Přidat do Google kalendáře</a></li>
+            <li>Stáhnout událost v iCal</li>
             <li>&nbsp;</li>
         </ul>
     </div>
 </div>
 
 <div id="fb-root"></div>
-<script src=http://code.jquery.com/jquery-1.6.4.min.js></script>
+<script src=http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js></script>
 <script>
     var ___gcfg = {lang:'cs'};
     var _gaq = _gaq || [];
@@ -203,6 +219,7 @@
 
         $(function($) {
             $('.popup').hide();
+            $('#calendar').click(function() { $('.calendar').slideToggle() });
         })
     })(jQuery);
 </script>
