@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>Code Retreat Praha 3. prosince 2011</title>
-    <meta property="og:title" content="Code Retreat" />
-    <meta property="og:type" content="activity" />
-    <meta property="og:url" content="http://coderetreat.cz/" />
-    <meta property="og:image" content="http://coderetreat.cz/coderetreat_big.png" />
-    <meta property="og:site_name" content="Code Retreat CZ" />
-    <meta property="fb:admins" content="1814692762" />
+    <meta property="og:title" content="Code Retreat">
+    <meta property="og:type" content="activity">
+    <meta property="og:url" content="http://coderetreat.cz/">
+    <meta property="og:image" content="http://coderetreat.cz/coderetreat_big.png">
+    <meta property="og:site_name" content="Code Retreat CZ">
+    <meta property="fb:admins" content="1814692762">
     <style>
         body {
             background-color: #333;
@@ -25,6 +25,7 @@
         p {
             margin: 0 0 1.5em;
         }
+
         ul, ol {
             padding-left: 2em;
         }
@@ -39,14 +40,44 @@
             margin: 3em 0 1em;
         }
 
+        .popup {
+            background: #000;
+            font-size: 1.5em;
+            line-height: 2;
+            font-weight: lighter;
+        }
+
+        .popup ul {
+            list-style: none;
+            padding: 12px;
+        }
+
+        .popup a {
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+        }
+        .popup a:active {
+            -moz-transition: all .2s;
+            -ms-transition: all .2s;
+            -webkit-transition: all .2s;
+
+            top: -4px;
+            left: 4px;
+            font-size: .889em;
+            line-height: 2.25em;
+        }
+
         #top {
             margin-left: 72px;
             position: relative;
         }
+
         #top > header {
             margin-top: 3em;
             height: 90px;
         }
+
         #top > header > h1:after {
             content: '';
             position: absolute;
@@ -56,6 +87,7 @@
             top: 0;
             left: -78px;
         }
+
         #top > footer {
             margin-top: 6em;
         }
@@ -63,6 +95,7 @@
         #toc-co-je-code-retreat h1 {
             color: #ff0;
         }
+
         #toc-game-of-life h1 {
             color: #f0f;
         }
@@ -73,7 +106,9 @@
 <div id="top" role="container">
 
     <header>
-        <h1>Code Retreat Praha 3. prosince 2011</h1>
+        <h1>Code Retreat Praha
+            <time datetime="2011-12-03">3. prosince 2011</time>
+        </h1>
     </header>
 
     <div role="main">
@@ -115,37 +150,61 @@
                     </ul>
                 </li>
             </ol>
-            <p><a href="http://en.wikipedia.org/wiki/Conway%27s_game_of_life">Detailní popis</a> můžete nalézt na Wikipedii.</p>
+            <p><a href="http://en.wikipedia.org/wiki/Conway%27s_game_of_life">Detailní popis</a> můžete nalézt na
+                Wikipedii.</p>
         </section>
     </div>
 
     <footer>
-        <div><a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-via="coderetreatcz">Tweet</a> <a href="https://twitter.com/coderetreatcz" class="twitter-follow-button" data-button="grey" data-text-color="#FFFFFF" data-link-color="#00FFFF" data-show-count="false">Follow @coderetreatcz</a></div>
-        <div><div class="g-plusone" data-annotation="inline" data-href="http://coderetreat.cz/"></div></div>
-        <div class="fb-like" data-href="http://coderetreat.cz/" data-send="false" data-width="518" data-show-faces="true" data-colorscheme="dark" data-font="arial"></div>
+        <div><a href="https://twitter.com/share" class="twitter-share-button" data-count="none"
+                data-via="coderetreatcz">Tweet</a> <a href="https://twitter.com/coderetreatcz"
+                                                      class="twitter-follow-button" data-button="grey"
+                                                      data-text-color="#FFFFFF" data-link-color="#00FFFF"
+                                                      data-show-count="false">Follow @coderetreatcz</a></div>
+        <div>
+            <div class="g-plusone" data-annotation="inline" data-href="http://coderetreat.cz/"></div>
+        </div>
+        <div class="fb-like" data-href="http://coderetreat.cz/" data-send="false" data-width="518"
+             data-show-faces="true" data-colorscheme="dark" data-font="arial"></div>
     </footer>
+
+    <div class="popup calendar">
+        <ul>
+            <li>
+                <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=Code%20Retreat&dates=20111203T070000Z/20111203T170000Z&details=&location=Praha&trp=true&sprop=http%3A%2F%2Fcoderetreat.cz%2F&sprop=name:"
+                   target="_blank">Add to Google Calendar</a></li>
+            <li>Download iCal</li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
 </div>
 
 <div id="fb-root"></div>
+<script src=http://code.jquery.com/jquery-1.6.4.min.js></script>
 <script>
-  var ___gcfg = {lang: 'cs'};
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-26103556-1']);
-  _gaq.push(['_trackPageview']);
+    var ___gcfg = {lang:'cs'};
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26103556-1']);
+    _gaq.push(['_trackPageview']);
 
-  (function() {
-      function loadScriptAsync(src) {
-          var as = document.createElement('script');
-          as.async = true;
-          as.src = src;
-          var s = document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(as, s);
-      }
-      loadScriptAsync('http://www.google-analytics.com/ga.js');
-      loadScriptAsync('https://apis.google.com/js/plusone.js');
-      loadScriptAsync('http://connect.facebook.net/cs_CZ/all.js#xfbml=1');
-      loadScriptAsync('http://platform.twitter.com/widgets.js');
-  })();
+    (function($, undefined) {
+        function loadScriptAsync(src) {
+            var as = document.createElement('script');
+            as.async = true;
+            as.src = src;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(as, s);
+        }
+
+        loadScriptAsync('http://www.google-analytics.com/ga.js');
+        loadScriptAsync('https://apis.google.com/js/plusone.js');
+        loadScriptAsync('http://connect.facebook.net/cs_CZ/all.js#xfbml=1');
+        loadScriptAsync('http://platform.twitter.com/widgets.js');
+
+        $(function($) {
+            $('.popup').hide();
+        })
+    })(jQuery);
 </script>
 </body>
 </html>
