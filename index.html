@@ -100,6 +100,9 @@
         #toc-game-of-life h1 {
             color: #f0f;
         }
+        #toc-chci-se-zucastnit h1 {
+            color: #0f0;
+        }
 
         #calendar {
             position: absolute;
@@ -116,6 +119,7 @@
             left: 528px;
         }
     </style>
+    <script src="http://platform.twitter.com/anywhere.js?id=7IbTBlfKZJWfR2IsywR9A&v=1"></script>
 </head>
 <body>
 
@@ -169,14 +173,23 @@
             <p><a href="http://en.wikipedia.org/wiki/Conway%27s_game_of_life">Detailní popis</a> můžete nalézt na
                 Wikipedii.</p>
         </section>
+
+        <section id="toc-chci-se-zucastnit">
+            <h1>Chci se zúčastnit</h1>
+            <p>Svůj zájem o účast na akci můžete vyjádřit na 
+                <a href="http://srazy.info/coderetreat/1477">stránce akce</a>.</p>
+            <p>Pro bližší informace sledujte náš twitter kanál @CodeRetreatCZ, kde budeme o akci
+                pravidelně informovat.</p>
+        </section>
     </div>
 
     <footer>
-        <div><a href="https://twitter.com/share" class="twitter-share-button" data-count="none"
-                data-via="coderetreatcz">Tweet</a> <a href="https://twitter.com/coderetreatcz"
-                                                      class="twitter-follow-button" data-button="grey"
-                                                      data-text-color="#FFFFFF" data-link-color="#00FFFF"
-                                                      data-show-count="false">Follow @coderetreatcz</a></div>
+        <div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-count="none"
+                data-via="coderetreatcz">Tweet</a>
+            <a href="https://twitter.com/coderetreatcz" class="twitter-follow-button" data-button="grey"
+                data-text-color="#FFFFFF" data-link-color="#00FFFF"
+                data-show-count="false">Follow @coderetreatcz</a></div>
         <div>
             <div class="g-plusone" data-annotation="inline" data-href="http://coderetreat.cz/"></div>
         </div>
@@ -221,6 +234,7 @@
         $(function($) {
             $('.popup').hide();
             $('#calendar').click(function() { $('.calendar').slideToggle() });
+            twttr.anywhere(function (T) { T.hovercards(); });
         })
     })(jQuery);
 </script>
