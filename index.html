@@ -43,7 +43,7 @@
             margin: 3em 0 1em;
         }
 
-        .srazy {
+        .srazy, .partneri {
             background: #fff;
             padding: 9px 12px;
             margin-bottom: 9px;
@@ -112,6 +112,9 @@
         #toc-chci-se-zucastnit h1 {
             color: #0f0;
         }
+        #toc-partneri h1 {
+            color: red;
+        }
 
         #calendar {
             position: absolute;
@@ -126,6 +129,14 @@
             position: absolute;
             top: 54px;
             left: 528px;
+            z-index: 10;
+        }
+        .twitter {
+            padding: 0 12px;
+            position: absolute;
+            top: 144px;
+            left: 540px;
+            z-index: 1;
         }
     </style>
     <script src="http://platform.twitter.com/anywhere.js?id=7IbTBlfKZJWfR2IsywR9A&v=1"></script>
@@ -216,6 +227,14 @@
             <p>Pro bližší informace sledujte náš twitter kanál @CodeRetreatCZ, kde budeme o akci
                 pravidelně informovat.</p>
         </section>
+
+        <section id="toc-partneri">
+            <h1>Partneři</h1>
+
+            <div class="partneri">
+                <a href="http://www.gmchk.cz/"><img src="http://gmchk.cz/design/img/ico_gmc_logo.png" alt="GMC Software Technology"></a>
+            </div>
+        </section>
     </div>
 
     <footer>
@@ -242,10 +261,46 @@
             <li>&nbsp;</li>
         </ul>
     </div>
+
+    <div class="twitter">
+        <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script>
+        new TWTR.Widget({
+          version: 2,
+          type: 'search',
+          search: 'coderetreatcz',
+          interval: 30000,
+          subject: 'CodeRetreatCZ na twitteru',
+          width: 336,
+          height: 360,
+          theme: {
+            shell: {
+              background: '#333333',
+              color: '#ffffff'
+            },
+            tweets: {
+              background: '#33333',
+              color: '#ffffff',
+              links: '#00ffff'
+            }
+          },
+          features: {
+            scrollbar: false,
+            loop: true,
+            live: true,
+            hashtags: true,
+            timestamp: true,
+            avatars: true,
+            toptweets: true,
+            behavior: 'default'
+          }
+        }).render().start();
+        </script>
+    </div>
 </div>
 
 <div id="fb-root"></div>
-<script src=http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js></script>
+<script src=http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js></script>
 <script>
     var ___gcfg = {lang:'cs'};
     var _gaq = _gaq || [];
@@ -268,10 +323,50 @@
 
         $(function($) {
             $('.popup').hide();
-            $('#calendar').click(function() { $('.calendar').slideToggle() });
+            $('#calendar').on('click', function() { $('.calendar').slideToggle() });
             twttr.anywhere(function (T) { T.hovercards(); });
         })
     })(jQuery);
 </script>
+
+<style>
+    #twtr-widget-1 {
+        font: 100%/1.5 'Myriad Pro', Candara, sans-serif !important;
+    }
+
+    #twtr-widget-1 h4 {
+        font-size: 1.5em !important;
+        line-height: 1.5em !important;
+        font-weight: normal !important;
+        margin: 0 0 1em !important;
+    }
+
+    #twtr-widget-1 .twtr-hd, #twtr-widget-1 .twtr-tweet-wrap {
+        padding: 0;
+    }
+
+    #twtr-widget-1 .twtr-ft {
+        display: none;
+    }
+
+    #twtr-widget-1 .twtr-tweet {
+        border: 0;
+    }
+    #twtr-widget-1 .twtr-tweet-text {
+        margin-left: 48px;
+    }
+    #twtr-widget-1 .twtr-avatar img {
+        width: 36px; height: 36px;
+    }
+
+
+    #twtr-widget-1 .twtr-tweet p {
+        line-height: 1.5 !important;
+        margin: 0 0 1.5em !important;
+    }
+    #twtr-widget-1 .twtr-tweet p em {
+        margin-top: 5px;
+    }
+</style>
 </body>
 </html>
