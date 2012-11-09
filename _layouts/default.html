@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <title>{% if page.title %} {{ page.title }} | {% endif %} Code Retreat CZ</title>
+    <meta name="description" content="Česká Code Retreat">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="http://coderetreat.cz/coderetreat_big.png">
+    <meta property="og:title" content="Code Retreat">
+    <meta property="og:type" content="activity">
+    <meta property="og:url" content="http://coderetreat.cz/">
+    <meta property="og:site_name" content="Code Retreat CZ">
+    <meta property="fb:admins" content="1814692762">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/bootstrap-responsive.min.css">
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="http://platform.twitter.com/anywhere.js?id=7IbTBlfKZJWfR2IsywR9A&v=1"></script>
+</head>
+<body>
+
+<div id="top" role="container" class="container-fluid">
+
+    <header>
+        <h1>Code Retreat</h1>
+    </header>
+
+    <div role="main">
+        {{content}}
+    </div>
+
+    <footer>
+        <div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-count="none"
+               data-via="coderetreatcz">Tweet</a>
+            <a href="https://twitter.com/coderetreatcz" class="twitter-follow-button" data-button="grey"
+               data-text-color="#FFFFFF" data-link-color="#00FFFF"
+               data-show-count="false">Follow @coderetreatcz</a></div>
+        <div>
+            <div class="g-plusone" data-annotation="inline" data-href="http://coderetreat.cz/"></div>
+        </div>
+        <div class="fb-like" data-href="http://coderetreat.cz/" data-send="false" data-width="518"
+             data-show-faces="true" data-colorscheme="dark" data-font="arial"></div>
+    </footer>
+
+    <div class="twitter">
+        <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script>
+            new TWTR.Widget({
+                version: 2,
+                type: 'search',
+                search: 'coderetreatcz',
+                interval: 30000,
+                subject: 'CodeRetreatCZ na twitteru',
+                width: 336,
+                height: 360,
+                theme: {
+                    shell: {
+                        background: '#333333',
+                        color: '#ffffff'
+                    },
+                    tweets: {
+                        background: '#33333',
+                        color: '#ffffff',
+                        links: '#00ffff'
+                    }
+                },
+                features: {
+                    scrollbar: false,
+                    loop: true,
+                    live: true,
+                    hashtags: true,
+                    timestamp: true,
+                    avatars: true,
+                    toptweets: true,
+                    behavior: 'default'
+                }
+            }).render().start();
+        </script>
+    </div>
+</div>
+
+<div id="fb-root"></div>
+<script src=http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js></script>
+<script>
+    var ___gcfg = {lang:'cs'};
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26103556-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function($, undefined) {
+        function loadScriptAsync(src) {
+            var as = document.createElement('script');
+            as.async = true;
+            as.src = src;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(as, s);
+        }
+
+        loadScriptAsync('http://www.google-analytics.com/ga.js');
+        loadScriptAsync('https://apis.google.com/js/plusone.js');
+        loadScriptAsync('http://connect.facebook.net/cs_CZ/all.js#xfbml=1');
+        loadScriptAsync('http://platform.twitter.com/widgets.js');
+
+        $(function($) {
+            $('.popup').hide();
+            $('#calendar').on('click', function() { $('.calendar').slideToggle() });
+            twttr.anywhere(function (T) { T.hovercards(); });
+        })
+    })(jQuery);
+</script>
+
+<style>
+    #twtr-widget-1 {
+        font: 100%/1.5 sans-serif !important;
+    }
+
+    #twtr-widget-1 h4 {
+        font-size: 1.5em !important;
+        line-height: 1.5em !important;
+        font-weight: normal !important;
+        margin: 0 0 1em !important;
+    }
+
+    #twtr-widget-1 .twtr-hd, #twtr-widget-1 .twtr-tweet-wrap {
+        padding: 0;
+    }
+
+    #twtr-widget-1 .twtr-ft {
+        display: none;
+    }
+
+    #twtr-widget-1 .twtr-tweet {
+        border: 0;
+    }
+    #twtr-widget-1 .twtr-tweet-text {
+        margin-left: 48px;
+    }
+    #twtr-widget-1 .twtr-avatar img {
+        width: 36px; height: 36px;
+    }
+
+    #twtr-widget-1 .twtr-tweet p {
+        line-height: 1.5 !important;
+        margin: 0 0 1.5em !important;
+    }
+    #twtr-widget-1 .twtr-tweet p em {
+        margin-top: 5px;
+    }
+</style>
+</body>
+</html>
