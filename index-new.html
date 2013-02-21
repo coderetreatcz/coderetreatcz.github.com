@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://scheme.org/Event" lang="cs">
+<head>
+    <meta charset="utf-8">
+    <title>Code Retreat CZ</title>
+    <meta itemprop="description" name="description" content="Česká Code Retreat">
+    <meta itemprop="image" property="og:image" content="http://coderetreat.cz/coderetreat_big.png">
+    <meta property="og:title" content="Code Retreat">
+    <meta property="og:type" content="activity">
+    <meta property="og:url" content="http://coderetreat.cz/">
+    <meta property="og:site_name" content="Code Retreat CZ">
+    <meta property="fb:admins" content="1814692762">
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font: 75%/1.5 'Myriad Pro', Candara, sans-serif;
+            margin: 0;
+            padding: 0 24px 54px;
+        }
+
+        a:link, a:visited {
+            color: #0ff;
+        }
+
+        p {
+            margin: 0 0 1.5em;
+        }
+
+        ul, ol {
+            padding-left: 2em;
+        }
+
+        section {
+            max-width: 43em;
+        }
+
+        section h1 {
+            font-size: 1.5em;
+            font-weight: normal;
+            margin: 3em 0 1em;
+        }
+
+        h1 + section {
+            margin-top: -2em;
+        }
+
+        section h2 {
+            font-size: 1.2em;
+            font-weight: normal;
+        }
+
+        .srazy, .partneri {
+            background: #fff;
+            padding: 9px 12px;
+            margin-bottom: 9px;
+        }
+
+        .popup {
+            background: #000;
+            font-size: 1.5em;
+            line-height: 2;
+            font-weight: lighter;
+            width: 240px;
+        }
+
+        .popup ul {
+            list-style: none;
+            padding: 0 12px;
+        }
+
+        .popup a {
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+        }
+        .popup a:active {
+            -moz-transition: all .2s;
+            -ms-transition: all .2s;
+            -webkit-transition: all .2s;
+
+            top: -4px;
+            left: 4px;
+            font-size: .889em;
+            line-height: 2.25em;
+        }
+
+        #top {
+            margin-left: 72px;
+            position: relative;
+        }
+
+        #top > header {
+            margin-top: 3em;
+            height: 90px;
+        }
+
+        #top > header > h1:after {
+            content: '';
+            position: absolute;
+            width: 688px;
+            height: 90px;
+            background: url('coderetreat_header.png');
+            top: 0;
+            left: -78px;
+        }
+
+        #top > footer {
+            margin-top: 6em;
+        }
+
+        #toc-co-je-code-retreat h1 {
+            color: #ff0;
+        }
+
+        #toc-game-of-life h1, #toc-predesle-iterace > h1 {
+            color: #f0f;
+        }
+
+        #toc-chci-se-zucastnit h1 {
+            color: #0f0;
+        }
+
+        #toc-partneri h1 {
+            color: red;
+        }
+
+        #calendar {
+            position: absolute;
+            top: 18px;
+            left: 628px;
+            background: url('cal.png');
+            width: 20px;
+            height: 19px;
+            cursor: pointer;
+        }
+        .calendar {
+            position: absolute;
+            top: 54px;
+            left: 528px;
+            z-index: 10;
+        }
+        .twitter {
+            padding: 0 12px;
+            position: absolute;
+            top: 144px;
+            left: 540px;
+            z-index: 1;
+        }
+
+        .partneri a {
+            margin-left: 30px;
+            margin-bottom: 10px;
+            display: inline-block;
+            width: 200px;
+        }
+    </style>
+    <script src="http://platform.twitter.com/anywhere.js?id=7IbTBlfKZJWfR2IsywR9A&v=1"></script>
+</head>
+<body>
+
+<div id="top" role="container">
+
+    <header>
+        <h1><span itemprop="name">Code Retreat</span>
+            <time datetime="2012-12-8">8. prosince 2012</time>
+        </h1>
+    </header>
+
+    <div role="main">
+        <section id="toc-co-je-code-retreat">
+            <h1>Co je code retreat?</h1>
+
+            <p>Coderetreat je jednodenní intenzivní cvičení zaměřené na základy
+            vývoje softwaru. Díky tomu, že vývojáři nejsou pod tlakem rychlého
+            doručování výsledků, poskytuje Coderetreat možnost cíleně se
+            soustředit na zlepšování svých dovedností. Procvičováním základních
+            principů modulárního a objektově-orientovaného návrhu mohou
+            účastníci zlepšit své schopnosti psát kód, který minimalizuje
+            náročnost implementace dalších změn.</p>
+
+            <p>Začíná se brzo - v&nbsp;8.00, ale můžete si být jisti, že to za
+            to vstávání bude stát. Po krátkém úvodu a&nbsp;představení problému
+            (<a href='#toc-game-of-life'>Game of Life</a>), který se budeme
+            pokoušet celý den řešit pomocí párového programování a <abbr
+            title="Test Driven Development">TDD</abbr>, budou následovat
+            3&nbsp;programovací sekce. Každá o&nbsp;délce 45&nbsp;minut,
+            zakončena krátkou retrospektivou a&nbsp;promícháním párů.</p>
+
+            <p>Pak bude následovat oběd a&nbsp;po něm další 3 programovací
+            sekce zakončené velkou retrospektivou. A&nbsp;aby toho nebylo
+            málo, večer nás bude čekat after-party!</p>
+
+            <p>Pokud vás zajímá, jak taková akce probíhá, přečtěte si blog Dana Kolmana:
+                <a href="http://blog.kolman.cz/2011/07/jak-jsme-jeli-na-coderetreat-do-berlina.html">Jak jsme jeli
+                    na CodeRetreat do Berlína</a>.
+            A pokud chcete zjistit jak z Coderetreat-u vytěžit maximum, podívejte se na
+            <a
+            href="http://www.quora.com/How-do-I-get-the-most-out-of-a-Code-Retreat">vlákno
+            na quora.com</a>.
+            </p>
+        </section>
+
+        <section id="toc-game-of-life">
+            <h1>Game of Life</h1>
+
+            <p>Game of Life je hra, která nemá hráče. To znamená, že po úvodním nastavení plochy
+                světa nevyžaduje žádný zásah uživatele.</p>
+
+            <p>Je jen několik málo pravidel, krerá řídí vývoj na ploše:</p>
+
+            <ol>
+                <li>Plocha světa je nekonečná dvourozměrná mříž obsahující buňky.</li>
+                <li>Každá z buněk má 8 sousedů.</li>
+                <li>Buňka je v jednom že stavu: mrtvá nebo živá.</li>
+                <li>Buňky mění stav po každém kroku a všechny v jeden okamžik.</li>
+                <li>Stav buňky v dalším kroku je určen stavem její sousedů:
+                    <ul>
+                        <li>Pokud má živá buňka míň než dva živé sousedy, umírá v důsledku nedostaku obyvatel.</li>
+                        <li>Pokud má živá buňka dva nebo tři živé sousedy, zůstává naživu do dalšího kola.</li>
+                        <li>Pokud má živá buňka více než tři živé sousedy, umírá v důsledku přemnožení.</li>
+                        <li>Pokud má mrtvá buňka přesně tři živé sousedy, stává se v dalším kole buňkou živou.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p><a href="http://en.wikipedia.org/wiki/Conway%27s_game_of_life">Detailní popis</a> můžete nalézt na
+                Wikipedii.</p>
+        </section>
+
+        <section id="toc-chci-se-zucastnit">
+            <h1>Chci se zúčastnit</h1>
+            <p>Svůj zájem o účast na akci můžete vyjádřit níže nebo na
+                <a href="http://srazy.info/coderetreat">stránce akce</a>.</p>
+            <div class="srazy">
+                <iframe src="http://srazy.info/widget/attending/2638?colorscheme=dark" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:70px;" allowtransparency="true"></iframe>
+            </div>
+            <p>Pro bližší informace sledujte náš twitter kanál @CodeRetreatCZ, kde budeme o akci
+                pravidelně informovat.</p>
+
+            <h2>Pár tipů na přípravu</h2>
+            <ul>
+                <li><a href="http://blog.kolman.cz/2011/12/jak-se-pripravit-na-code-retreat.html">Dan Kolman - Jak se připravit na Code Retreat</a></li>
+                <li><a href="http://rarous.net/weblog/412-trenujete-na-code-retreat.aspx">Aleš Roubíček - Trénujete na Code Retreat?</a></li>
+            </ul>
+        </section>
+
+        <section id="toc-predesle-iterace">
+            <h1>Předešlé iterace</h1>
+
+            <section id="toc-code-retreat-hradec-kralove">
+                <h1>Code Reatreat - Hradec Králové</h1>
+                <p><strong>V sobotu, 2. června</strong>, jsem vám poprvé přinesli Coderetreat do Hradce Králové.</p>
+
+                <h2>Partneři</h2>
+                <div class="partneri">
+                    <a href="http://www.gmchk.cz/"><img src="img/gmc.png" alt="GMC Software Technology"></a>
+                    <a href="http://www.uhk.cz/"><img src="img/UHK.png" alt="Univerzita Hradec Králové"></a>
+                    <a href="http://www.pragprog.com/"><img src="img/pragprog.png" alt="The Pragmatic Programmers"></a>
+                    <a href="http://www.github.com/"><img src="img/github.png" alt="GitHub"></a>
+                </div>
+            </section>
+                    
+            <section id="toc-druhy-code-retreat">
+                <h1>Druhá česká Code Retreat</h1>
+                <p><strong>V sobotu, 21. dubna 2012</strong>, jsme vám podruhé přinesli Coderetreat do Prahy.</p>
+                <h2>Partneři</h2>
+                <div class="partneri">
+                    <a href="http://www.vendavo.cz"><img src="img/vendavo.jpg" alt="Vendavo CZ"></a>
+                    <a href="http://www.think-forth.com/"><img src="img/think-forth.png" alt="Think Forth"></a>
+                    <a href="http://www.pragprog.com/"><img src="img/pragprog.png" alt="The Pragmatic Programmers"></a>
+                    <a href="http://www.jetbrains.com/"><img src="img/jetbrains.png" alt="JetBrains"></a>
+                    <a href="http://www.github.com/"><img src="img/github.png" alt="GitHub"></a>
+                </div>
+            </section>
+                    
+            <section id="toc-prvni-code-retreat">
+                    <h1>První česká Code Retreat</h1>
+
+                    <p><strong>V sobotu, 3. prosince 2011</strong>, jsme vám poprvé přinesli Coderetreat
+                        i do České republiky. Byli jsme součástí akce <a href="http://blog.coderetreat.com/global-day-of-coderetreat">Global
+                        Day of Coderetreat</a>, v rámci které se konalo ve stejný den asi 90
+                        Coderetreat-ů po celém světě.</p>
+
+                    <h2>Partneři</h2>
+                    <div class="partneri">
+                            <a href="http://www.gmchk.cz/"><img src="img/gmc.png" alt="GMC Software Technology"></a>
+                            <a href="http://www.think-forth.com/"><img src="img/think-forth.png" alt="Think Forth"></a>
+                    </div>
+
+                    <h2>Ohlasy</h2>
+                    <ul>
+                            <li><a href="http://photos.coderetreat.cz/">Fotografie z akce</a></li>
+                            <li><a href="http://davidjs.com/2011/12/code-retreat-2011-prague/">David Votrubec - Co jsem si odnesl z Code Retreat 2011</a></li>
+                            <li><a href="http://blog.novoj.net/2011/12/04/coderetreat-praha-2011/">Jan Novotný - CodeRetreat Praha 2011</a></li>
+                            <li><a href="http://blog.martinhujer.cz/coderetreat-praha-3-12-2011/">Martin Hujer - CodeRetreat Praha - 3. 12. 2011</a></li>
+                            <li><a href="http://blog.think-forth.com/2011/12/22/coderetreat-2011/">Marian Schubert - CodeRetreat - Praha 2011</a></li>
+                            <li><a href="http://blog.think-forth.com/2012/01/03/coderetreat-zaverecna-retrospektiva/">Martin Pavlas - CodeRetreat - Závěrečná retrospektiva</a></li>
+                    </ul>
+            </section>
+        </section>
+    </div>
+
+    <footer>
+        <div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-count="none"
+                data-via="coderetreatcz">Tweet</a>
+            <a href="https://twitter.com/coderetreatcz" class="twitter-follow-button" data-button="grey"
+                data-text-color="#FFFFFF" data-link-color="#00FFFF"
+                data-show-count="false">Follow @coderetreatcz</a></div>
+        <div>
+            <div class="g-plusone" data-annotation="inline" data-href="http://coderetreat.cz/"></div>
+        </div>
+        <div class="fb-like" data-href="http://coderetreat.cz/" data-send="false" data-width="518"
+             data-show-faces="true" data-colorscheme="dark" data-font="arial"></div>
+    </footer>
+
+    <div id="calendar" title="Přidat do kalendáře"></div>
+
+    <div class="popup calendar">
+        <ul>
+            <li><a href="http://www.google.com/calendar/event?action=TEMPLATE&text=Code%20Retreat&dates=20120602T070000Z/20120602T170000Z&details=&location=Hradec Králové&trp=true&sprop=http%3A%2F%2Fcoderetreat.cz%2F&sprop=name:"
+                   target="_blank">Přidat do Google kalendáře</a></li>
+            <li><a href="/coderetreat.ics" download>Stáhnout událost v iCal</a></li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
+
+    <div class="twitter">
+        <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script>
+        new TWTR.Widget({
+          version: 2,
+          type: 'search',
+          search: 'coderetreatcz',
+          interval: 30000,
+          subject: 'CodeRetreatCZ na twitteru',
+          width: 336,
+          height: 360,
+          theme: {
+            shell: {
+              background: '#333333',
+              color: '#ffffff'
+            },
+            tweets: {
+              background: '#33333',
+              color: '#ffffff',
+              links: '#00ffff'
+            }
+          },
+          features: {
+            scrollbar: false,
+            loop: true,
+            live: true,
+            hashtags: true,
+            timestamp: true,
+            avatars: true,
+            toptweets: true,
+            behavior: 'default'
+          }
+        }).render().start();
+        </script>
+    </div>
+</div>
+
+<div id="fb-root"></div>
+<script src=http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js></script>
+<script>
+    var ___gcfg = {lang:'cs'};
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26103556-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function($, undefined) {
+        function loadScriptAsync(src) {
+            var as = document.createElement('script');
+            as.async = true;
+            as.src = src;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(as, s);
+        }
+
+        loadScriptAsync('http://www.google-analytics.com/ga.js');
+        loadScriptAsync('https://apis.google.com/js/plusone.js');
+        loadScriptAsync('http://connect.facebook.net/cs_CZ/all.js#xfbml=1');
+        loadScriptAsync('http://platform.twitter.com/widgets.js');
+
+        $(function($) {
+            $('.popup').hide();
+            $('#calendar').on('click', function() { $('.calendar').slideToggle() });
+            twttr.anywhere(function (T) { T.hovercards(); });
+        })
+    })(jQuery);
+</script>
+
+<style>
+    #twtr-widget-1 {
+        font: 100%/1.5 'Myriad Pro', Candara, sans-serif !important;
+    }
+
+    #twtr-widget-1 h4 {
+        font-size: 1.5em !important;
+        line-height: 1.5em !important;
+        font-weight: normal !important;
+        margin: 0 0 1em !important;
+    }
+
+    #twtr-widget-1 .twtr-hd, #twtr-widget-1 .twtr-tweet-wrap {
+        padding: 0;
+    }
+
+    #twtr-widget-1 .twtr-ft {
+        display: none;
+    }
+
+    #twtr-widget-1 .twtr-tweet {
+        border: 0;
+    }
+    #twtr-widget-1 .twtr-tweet-text {
+        margin-left: 48px;
+    }
+    #twtr-widget-1 .twtr-avatar img {
+        width: 36px; height: 36px;
+    }
+
+
+    #twtr-widget-1 .twtr-tweet p {
+        line-height: 1.5 !important;
+        margin: 0 0 1.5em !important;
+    }
+    #twtr-widget-1 .twtr-tweet p em {
+        margin-top: 5px;
+    }
+</style>
+</body>
+</html>
