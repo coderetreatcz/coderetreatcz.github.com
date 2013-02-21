@@ -28,54 +28,10 @@ layout: default
 <section id="toc-predesle-iterace">
     <h1>Předešlé iterace</h1>
 
-    <section id="toc-code-retreat-hradec-kralove">
-        <h1>Code Reatreat - Hradec Králové</h1>
-        <p><strong>V sobotu, 2. června</strong>, jsem vám poprvé přinesli Coderetreat do Hradce Králové.</p>
+    <ul class="entries">
+        {% for post in site.posts %}
+        <li><a href="{{ post.url }}"><h3>{{ post.title }}</h3></a></li>
+        {% endfor %}
+    </ul>
 
-        <h2>Partneři</h2>
-        <div class="partneri">
-            <a href="http://www.gmchk.cz/"><img src="img/gmc.png" alt="GMC Software Technology"></a>
-            <a href="http://www.uhk.cz/"><img src="img/UHK.png" alt="Univerzita Hradec Králové"></a>
-            <a href="http://www.pragprog.com/"><img src="img/pragprog.png" alt="The Pragmatic Programmers"></a>
-            <a href="http://www.github.com/"><img src="img/github.png" alt="GitHub"></a>
-        </div>
-    </section>
-            
-    <section id="toc-druhy-code-retreat">
-        <h1>Druhá česká Code Retreat</h1>
-        <p><strong>V sobotu, 21. dubna 2012</strong>, jsme vám podruhé přinesli Coderetreat do Prahy.</p>
-        <h2>Partneři</h2>
-        <div class="partneri">
-            <a href="http://www.vendavo.cz"><img src="img/vendavo.jpg" alt="Vendavo CZ"></a>
-            <a href="http://www.think-forth.com/"><img src="img/think-forth.png" alt="Think Forth"></a>
-            <a href="http://www.pragprog.com/"><img src="img/pragprog.png" alt="The Pragmatic Programmers"></a>
-            <a href="http://www.jetbrains.com/"><img src="img/jetbrains.png" alt="JetBrains"></a>
-            <a href="http://www.github.com/"><img src="img/github.png" alt="GitHub"></a>
-        </div>
-    </section>
-            
-    <section id="toc-prvni-code-retreat">
-            <h1>První česká Code Retreat</h1>
-
-            <p><strong>V sobotu, 3. prosince 2011</strong>, jsme vám poprvé přinesli Coderetreat
-                i do České republiky. Byli jsme součástí akce <a href="http://blog.coderetreat.com/global-day-of-coderetreat">Global
-                Day of Coderetreat</a>, v rámci které se konalo ve stejný den asi 90
-                Coderetreat-ů po celém světě.</p>
-
-            <h2>Partneři</h2>
-            <div class="partneri">
-                    <a href="http://www.gmchk.cz/"><img src="img/gmc.png" alt="GMC Software Technology"></a>
-                    <a href="http://www.think-forth.com/"><img src="img/think-forth.png" alt="Think Forth"></a>
-            </div>
-
-            <h2>Ohlasy</h2>
-            <ul>
-                    <li><a href="http://photos.coderetreat.cz/">Fotografie z akce</a></li>
-                    <li><a href="http://davidjs.com/2011/12/code-retreat-2011-prague/">David Votrubec - Co jsem si odnesl z Code Retreat 2011</a></li>
-                    <li><a href="http://blog.novoj.net/2011/12/04/coderetreat-praha-2011/">Jan Novotný - CodeRetreat Praha 2011</a></li>
-                    <li><a href="http://blog.martinhujer.cz/coderetreat-praha-3-12-2011/">Martin Hujer - CodeRetreat Praha - 3. 12. 2011</a></li>
-                    <li><a href="http://blog.think-forth.com/2011/12/22/coderetreat-2011/">Marian Schubert - CodeRetreat - Praha 2011</a></li>
-                    <li><a href="http://blog.think-forth.com/2012/01/03/coderetreat-zaverecna-retrospektiva/">Martin Pavlas - CodeRetreat - Závěrečná retrospektiva</a></li>
-            </ul>
-    </section>
 </section>

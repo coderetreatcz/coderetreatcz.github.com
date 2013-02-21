@@ -42,6 +42,10 @@ section h2 {
     font-weight: normal;
 }
 
+ul.entries {
+    list-style-type: none
+}
+
 .srazy, .partneri {
     background: #fff;
     padding: 9px 12px;
