@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<section id="toc-co-je-code-retreat">
+    <h1>Co je code retreat?</h1>
+    {% include intro.html %}
+
+    <p>Začíná se brzo - v&nbsp;8.00, ale můžete si být jisti, že to za
+    to vstávání bude stát. Po krátkém úvodu a&nbsp;představení problému
+    (<a href='#toc-game-of-life'>Game of Life</a>), který se budeme
+    pokoušet celý den řešit pomocí párového programování a <abbr
+    title="Test Driven Development">TDD</abbr>, budou následovat
+    3&nbsp;programovací sekce. Každá o&nbsp;délce 45&nbsp;minut,
+    zakončena krátkou retrospektivou a&nbsp;promícháním párů.</p>
+
+    <p>Pak bude následovat oběd a&nbsp;po něm další 3 programovací
+    sekce zakončené velkou retrospektivou. A&nbsp;aby toho nebylo
+    málo, večer nás bude čekat after-party!</p>
+
+    <p>Pokud vás zajímá, jak taková akce probíhá, přečtěte si blog Dana Kolmana:
+    <a href="http://blog.kolman.cz/2011/07/jak-jsme-jeli-na-coderetreat-do-berlina.html">Jak jsme jeli
+    na CodeRetreat do Berlína</a>.
+    A pokud chcete zjistit jak z Coderetreat-u vytěžit maximum, podívejte se na
+    <a
+    href="http://www.quora.com/How-do-I-get-the-most-out-of-a-Code-Retreat">vlákno
+    na quora.com</a>.
+    </p>
+</section>
+
+<section id="toc-game-of-life">
+    <h1>Game of Life</h1>
+
+    <p>Game of Life je hra, která nemá hráče. To znamená, že po úvodním nastavení plochy
+        světa nevyžaduje žádný zásah uživatele.</p>
+
+    <p>Je jen několik málo pravidel, krerá řídí vývoj na ploše:</p>
+
+    <ol>
+        <li>Plocha světa je nekonečná dvourozměrná mříž obsahující buňky.</li>
+        <li>Každá z buněk má 8 sousedů.</li>
+        <li>Buňka je v jednom že stavu: mrtvá nebo živá.</li>
+        <li>Buňky mění stav po každém kroku a všechny v jeden okamžik.</li>
+        <li>Stav buňky v dalším kroku je určen stavem její sousedů:
+            <ul>
+                <li>Pokud má živá buňka míň než dva živé sousedy, umírá v důsledku nedostaku obyvatel.</li>
+                <li>Pokud má živá buňka dva nebo tři živé sousedy, zůstává naživu do dalšího kola.</li>
+                <li>Pokud má živá buňka více než tři živé sousedy, umírá v důsledku přemnožení.</li>
+                <li>Pokud má mrtvá buňka přesně tři živé sousedy, stává se v dalším kole buňkou živou.</li>
+            </ul>
+        </li>
+    </ol>
+    <p><a href="http://en.wikipedia.org/wiki/Conway%27s_game_of_life">Detailní popis</a> můžete nalézt na
+        Wikipedii.</p>
+</section>
+
