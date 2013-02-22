@@ -122,6 +122,10 @@ ul.entries {
     color: red;
 }
 
+#toc-event-description {
+    min-height: 360px; /* match twitter widget height */
+}
+
 #calendar {
     position: absolute;
     top: 18px;
