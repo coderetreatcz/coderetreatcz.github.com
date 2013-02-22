@@ -92,7 +92,7 @@ ul.entries {
     height: 90px;
 }
 
-#top > header > h1:after {
+#top > header h1:after {
     content: '';
     position: absolute;
     width: 688px;
