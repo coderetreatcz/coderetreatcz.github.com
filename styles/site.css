@@ -162,3 +162,21 @@ ul.entries {
     width: 200px;
 }
 
+section#toc-event-attendees {
+    max-width: 800px; /* same as of gallery iframe */
+}
+
+.attendees li {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 250px;
+}
+
+.attendees .avatar {
+    width: 32px;
+    vertical-align: middle;
+}
+
+.attendees .name {
+    padding-left: 1em;
+}
