@@ -162,6 +162,10 @@ ul.entries {
     width: 200px;
 }
 
+.partneri a img {
+  max-width: 200px;
+}
+
 section#toc-event-attendees {
     max-width: 800px; /* same as of gallery iframe */
 }
