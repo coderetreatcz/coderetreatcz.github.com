@@ -105,8 +105,6 @@
         loadScriptAsync('http://platform.twitter.com/widgets.js');
 
         $(function($) {
-            $('.popup').hide();
-            $('#calendar').on('click', function() { $('.calendar').slideToggle() });
             twttr.anywhere(function (T) { T.hovercards(); });
         })
     })(jQuery);

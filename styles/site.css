@@ -56,36 +56,6 @@ ul.entries {
     margin-bottom: 9px;
 }
 
-.popup {
-    background: #000;
-    font-size: 1.5em;
-    line-height: 2;
-    font-weight: lighter;
-    width: 240px;
-}
-
-.popup ul {
-    list-style: none;
-    padding: 0 12px;
-}
-
-.popup a {
-    color: #fff;
-    text-decoration: none;
-    position: relative;
-}
-
-.popup a:active {
-    -moz-transition: all .2s;
-    -ms-transition: all .2s;
-    -webkit-transition: all .2s;
-
-    top: -4px;
-    left: 4px;
-    font-size: .889em;
-    line-height: 2.25em;
-}
-
 #top {
     margin-left: 72px;
     position: relative;
@@ -128,23 +98,6 @@ ul.entries {
 
 #toc-event-description {
     min-height: 360px; /* match twitter widget height */
-}
-
-#calendar {
-    position: absolute;
-    top: 18px;
-    left: 628px;
-    background: url('cal.png');
-    width: 20px;
-    height: 19px;
-    cursor: pointer;
-}
-
-.calendar {
-    position: absolute;
-    top: 54px;
-    left: 528px;
-    z-index: 10;
 }
 
 .twitter {
