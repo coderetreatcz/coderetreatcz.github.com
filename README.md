@@ -15,3 +15,8 @@ $ vagrant ssh
 vagrant@precise32:~$ cd /vagrant/
 vagrant@precise32:/vagrant$ jekyll serve -w
 ```
+
+Alternatively, if you prefer Docker, you can use docker image for github pages
+```
+docker run -t --rm -v "$PWD":/usr/src/app -p "4000:4000" starefossen/github-pages
+```
