@@ -28,7 +28,7 @@ layout: default
                 $('<li></li>')
                     .append(
                         $('<a></a>')
-                        .attr('href', 'http://srazy.info/lide/' + attendeeJson.url)
+                        .attr('href', 'https://srazy.info/lide/' + attendeeJson.url)
                         .append($('<img class="avatar"></img>').attr('src', attendeeJson.avatar_url))
                         .append($('<span class="name"></span>').text(attendeeJson.realname))
                     )
@@ -37,7 +37,7 @@ layout: default
 
             var parent = $('ul.attendees');
             $.ajax({
-                url: 'http://api.srazy.info/date/{{ page.srazyId }}/attending',
+                url: 'https://api.srazy.info/date/{{ page.srazyId }}/attending',
 
                 success: function(data) {
                     $.each(data, function(index, value) { appendAttendee(parent, value); });
